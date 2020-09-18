@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "123150135897",
+    "firebase_url": "https://nurseirator.firebaseio.com",
+    "project_id": "nurseirator",
+    "storage_bucket": "nurseirator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123150135897:android:ab3de658c74a2f6c5bf748",
+        "android_client_info": {
+          "package_name": "com.example.nurseirator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "123150135897-7568dpj4ltv8rqo59rv1o2nblo7ht0jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1sBe8rwAtYrhTmGIjDb2fEjmmfx8U_pk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "123150135897-7568dpj4ltv8rqo59rv1o2nblo7ht0jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
