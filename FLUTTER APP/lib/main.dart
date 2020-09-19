@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:nurseirator/Reg.dart';
 import 'package:nurseirator/Registration.dart';
 import 'package:nurseirator/login.dart';
+import 'package:nurseirator/nurse.dart';
 import 'package:nurseirator/welcomeScreen.dart';
 import 'package:nurseirator/patient.dart';
 import 'package:nurseirator/Reg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:nurseirator/login.dart';
+import 'nurse.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -22,13 +24,14 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
+      initialRoute: '/nurse',
       routes: {
         '/':(context)=>welcomeScreen(),
         '/register':(context)=>registerScreen(),
         '/reg':(context)=>registration(),
         '/login':(context)=>loginScreen(),
         '/patient':(context)=>patient(),
+        '/nurse':(context)=>nurse(),
       },
     );
   }
