@@ -97,7 +97,7 @@ function signup(){
             })
             .then(function(response){
               console.log("Added succesfully")
-              window.location=desig.value+'details.html'
+              window.location=desig.value+'.html'
 
           }).catch(function(error){
             var error_code = error.code;
