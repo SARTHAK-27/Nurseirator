@@ -22,7 +22,7 @@ The application aims to provide online consultance and healthcare, booking appoi
 ## Contribute 👨‍👨‍👧‍👦
 Thanks for taking the time to contribute!
 
-The following is a set of guidelines for contributing to Nurseirator. Please check out the [Contribute.md](https://github.com/Nurseirator/blob/master/Contribute.md) . These are just guidelines, not rules, so use your best judgement and feel free to propose changes to this document in a pull request.
+The following is a set of guidelines for contributing to Nurseirator. Please check out the [Contribute.md](https://github.com/SARTHAK-27/Nurseirator/blob/master/Contribute.md) . These are just guidelines, not rules, so use your best judgement and feel free to propose changes to this document in a pull request.
 
 If you have any questions, open an issue.
 
