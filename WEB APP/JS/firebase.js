@@ -33,7 +33,7 @@ function login(){
 
             firebase.database().ref(desig.value+'\/'+user.uid).once("value",snap=>{
 
-             if(snap.val().role == desig.value){
+             if(desig.value.localeCompare(snap.val().role)==0){
                window.location = desig.value+'.html';
              }
 
@@ -50,10 +50,7 @@ function login(){
             window.location= 'main.html';
 
           }
-
-
         })
-
       });
   
   
