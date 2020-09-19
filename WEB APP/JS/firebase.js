@@ -110,7 +110,7 @@ function signup(){
             })
             .then(function(response){
               console.log("Added succesfully")
-              window.location=desig.value+'.html'
+              window.location=desig.value+'details.html'
 
           }).catch(function(error){
             var error_code = error.code;
@@ -151,7 +151,7 @@ function logout(){
 function med_First(){
 
   
-  document.getElementById('').addEventListener('',function(e){
+  document.getElementById('fmed').addEventListener('submit',function(e){
 
     e.preventDefault();
     
@@ -162,10 +162,14 @@ function med_First(){
     var fri = document.getElementById('fri');  
     var sat= document.getElementById('sat');
     var sun = document.getElementById('sun');
+    var treat = document.getElementById('Treatment');  
+    var covid= document.getElementById('covid');
+    var bgrp = document.getElementById('bgroup');
 
     firebase.auth().onAuthStateChanged(user => {
       if(user) {
-        Firebase.database().ref('Medi/'+user.Messageuid).set({
+        console.log("hi");
+        firebase.database().ref('Medi/'+user.uid).set({
 
           Monday    :mon.value,
           Tuesday   :tues.value,
@@ -173,18 +177,22 @@ function med_First(){
           Thursday  :thus.value,
           Friday    :fri.value,
           Saturday  :sat.value,
-          Sunday    :sun.value})
+          Sunday    :sun.value,
+          covid_test:covid.value,
+          treatment :treat.value,
+          blood_group:bgrp.value})
           .then(function(response){
             
             console.log("Medicine Added!"),
-            window.location='.html';
+            window.location='patient.html';
 
         });
       }
       
       else{
 
-      
+      alert("NO user!!");
+      window.location='main.html';
       }
 
     });

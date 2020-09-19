@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Medication Form</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="CSS/medformstyle.css">
+<script src="formscript.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+<body>
+<div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="fmed">
+<fieldset>
+
+<!-- Form Name -->
+<legend class="heading1">Medication Details Form</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Treatment</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="fa fa-eyedropper"></i></span>
+  <input  name="first_name" placeholder="Treatment Details" class="form-control"  type="text" id="Treatment">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label">Blood Group</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-tint">&nbsp;</i></span>
+    <input  name="first_name" placeholder="Type" class="form-control"  type="text" id="bgroup">
+      </div>
+    </div>
+  </div>
+<!-- Text input-->
+<div class="form-group"> 
+    <label class="col-md-4 control-label">COVID-19 Test</label>
+      <div class="col-md-4 selectContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-drivers-license-o"></i></span>
+      <select name="state" class="form-control selectpicker" id="covid">
+        <option value=" " >Please select a status</option>
+       <option value="positive"> Positive</option>
+       <option value="negative"> Negative </option>
+       <option value="notdone"> Not Tested</option>
+      </select>
+    </div>
+  </div>
+  </div>
+
+<!-- Select Basic -->
+
+
+<div class="form-group">
+    <label class="col-md-4 control-label">Monday</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <input name="city" placeholder="Day-1 Medicines" class="form-control"  type="text" id="mon">
+      </div>
+    </div>
+  </div>
+
+<!-- Text input-->
+<div class="form-group">
+    <label class="col-md-4 control-label">Tuesday</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <input name="city" placeholder="Day-2 Medicines" class="form-control"  type="text"  id="tue">
+      </div>
+    </div>
+  </div>
+
+<!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Wednesday</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <input name="city" placeholder="Day-3 Medicines" class="form-control"  type="text"  id="wed">
+      </div>
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Thursday</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <input name="city" placeholder="Day-4 Medicines" class="form-control"  type="text"  id="thus"> 
+      </div>
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Friday</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <input name="city" placeholder="Day-5 Medicines" class="form-control"  type="text"  id="fri">
+      </div>
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Saturday</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <input name="city" placeholder="Day-6 Medicines" class="form-control"  type="text"  id="sat">
+      </div>
+    </div>
+  </div>
+
+  <!-- Select Basic -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Sunday</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <input name="city" placeholder="Day-7 Medicines" class="form-control"  type="text"  id="sun">
+      </div>
+    </div>
+  </div>
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="final btn btn-warning"onclick=med_First() >Sumbit<span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script src="JS/firebase.js" ></script>
+    </body>
+</html>

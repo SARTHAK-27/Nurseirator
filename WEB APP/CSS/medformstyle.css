@@ -1,0 +1,25 @@
+#success_message{ display: none;
+}
+.container{
+  margin-top: 2%;
+}
+body{
+  background: #28afa8;
+  color : white;
+}
+.form-horizontal{
+  background-color: #2f4455;
+  
+}
+.heading1{
+  color: white;
+}
+.final{
+  background: #28afa8;
+  margin-left: 40%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+*{
+  font-family: 'Open Sans', sans-serif;
+}

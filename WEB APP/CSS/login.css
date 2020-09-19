@@ -69,7 +69,9 @@ font-family: 'Open Sans', sans-serif;
 	background: rgba(0, 0, 0, .64);
 	z-index: -1;
 }
-
+#wrapper:hover{
+	box-shadow: 5px 20px 25px 5px #2f4455;;
+}
 #table {
 	margin-bottom: 6em;
 }
