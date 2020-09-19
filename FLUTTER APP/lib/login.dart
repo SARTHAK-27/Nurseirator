@@ -71,7 +71,7 @@ class _loginScreenState extends State<loginScreen> {
                     print(email);
                     if(user!=null)
                     {
-                      Navigator.pushNamed(context, '/');
+                      Navigator.pushNamed(context, '/patient');
                       print(email);
                     }
 
