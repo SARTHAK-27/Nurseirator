@@ -14,6 +14,18 @@ var firebaseConfig = {
 
 function login(){
 
+  document.getElementById('').addEventListener('',function(e){
+
+    e.preventDefault();
+
+  
+  
+  
+  
+  
+  });
+
+
 
 }
 
@@ -24,6 +36,13 @@ function signup(){
 
 function logout(){
 
+  firebase.auth().onAuthStateChanged(user => {
+    if(user){
+      firebase.auth().signOut();
+      window.location = '.html'; 
+    }
+  
+  });
 
 
 }
