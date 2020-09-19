@@ -1,8 +1,7 @@
 # Nurseirator 🤖 
 Just one click away!
 Your one-stop solution for medical consultance and emergencies 🩺🥼🏥
-A user friendly web application for elderly person or someone in need of home nurse to hire. 🏡
-The Web app also allows the user to maintain their history of prescription and also remind them of their current ones on time. Nurse and the user, both, will get reminders through WhatsApp or any other feasible medium to take or give medicine on time.
+A user friendly application for elderly person or someone in need of home nurse to hire. 🏡 It also allows the user to maintain their history of prescription and remind them of their current ones on time. Nurse and the user, both, will get reminders through WhatsApp or any other feasible medium to take or give medicine on time.
 
 ## Motivation
 The application aims to provide online consultance and healthcare, booking appointments by checking nurse-doctor availability, emergency assistance and an interactive, friendly chatbot - HASICS to assist users and provide remedy advices for ill-health. In perennial times when the world is in the middle of a deadly pandemic, the website acts as a saviour that can assist in the management of hospitals and services.
