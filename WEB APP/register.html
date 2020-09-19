@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<title>Sample Form</title>
+<meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./CSS/register.css">
+<script src="./JS/register.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <form class="well form-horizontal" action="" method="post"  id="Signup">
+<fieldset>
+
+<!-- Form Name -->
+<legend class="heading1">SignUp Form</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text" id=first_name>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text" id=last_name>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label email">E-Mail</label>
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+    <input type="email" class="form-control" placeholder="Enter Email" id="mail">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label email">Password</label>
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+    <input type="password" class="form-control" id="paswd" placeholder="Enter Password">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+   <label class="col-md-4 control-label email">Phone Number</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text" id="phone">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Address</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Address" class="form-control" type="text" id="address">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">City</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="city" class="form-control"  type="text" id="City"> 
+    </div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">State</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" id="state">
+      <option value=" " >Please select your state</option>
+     <option value="Andhra Pradesh">Andhra Pradesh	</option>
+     <option value="Arunachal Pradesh">Arunachal Pradesh	</option>
+     <option value="Assam">Assam</option>
+     <option value="Bihar">Bihar</option>
+     <option value="Chhattisgarh">Chhattisgarh</option>
+     <option value="Goa">Goa	</option>
+     <option value="Gujarat">Gujarat	</option>
+     <option value="Haryana">Haryana</option>
+     <option value="Himachal Pradesh">Himachal Pradesh</option>
+     <option value="Jharkhand">Jharkhand	</option>
+     <option value="Karnataka">	Karnataka	</option>
+     <option value="Kerala">Kerala	</option>
+    <option value="Madhya Pradesh">Madhya Pradesh	</option>
+    <option value="Maharashtra">Maharashtra	</option>
+    <option value="Manipur">Manipur	</option>
+    <option value="Meghalaya">Meghalaya	</option>
+    <option value="Mizoram">	Mizoram	</option>
+    <option value="Nagaland">Nagaland	</option>
+    <option value="Odisha">Odisha	</option>
+    <option value="Punjab">Punjab	</option>
+    <option value="Rajasthan">Rajasthan	</option>
+    <option value="Sikkim">Sikkim	</option>
+    <option value="Tamil Nadu">Tamil Nadu	</option>
+    <option value="Telangana">Telangana	</option>
+    <option value="Tripura">Tripura	</option>
+    <option value="Uttar Pradesh">Uttar Pradesh	</option>
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="West Bengal">West Bengal</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Zip Code</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Zip Code" class="form-control"  type="text" id ="code">
+    </div>
+</div>
+</div>
+
+<!-- Text input-->
+<!-- Select Basic -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Who are you?</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="you" class="form-control selectpicker" id="role" >
+      <option value="" >Doctor/Nurse/Patient</option>
+     <option value="Doctor">Doctor</option>
+     <option value="Nurse">Nurse</option>
+     <option value="Patient">Patient</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- radio checks -->
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Gender</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="Male" id="gender"/> Male
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="Female" id="gender"/> Female
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="hosting" value="other" id="gender"/> Prefer to not say
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Text area -->
+
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="final btn btn-warning" onclick=signup()>Sumbit<span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+
+
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="JS/firebase.js" ></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+    </body>
+</html>

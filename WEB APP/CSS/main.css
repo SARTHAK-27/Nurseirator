@@ -1,0 +1,143 @@
+.navbar{
+  background-color: #2f4455;
+}
+.navbar-nav{
+  padding-left: 2%;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.l:hover {
+  color: white;
+  text-decoration: none;
+}
+.display1{
+  color:black;
+}
+body{
+  color: white;
+  background-color: #28afa8;
+}
+.nav-item{
+  padding-left: 40px;
+}
+.quote{
+  border-style: solid;
+  border-radius: 50px;
+  border-color: #28afa8;
+  background-color: #2f4455;
+  color: white;
+}
+#button{
+  margin-right: 10px;
+  margin-left: 30px;
+
+}
+#heading{
+  width: 30%;
+  padding-top: 200px;
+
+}
+#h{
+  text-align: center;
+}
+.b{
+  width: 50%;
+  margin-left: 25%;
+}
+.hr2{
+  width: 20%;
+  margin-left: 40%;
+  margin-bottom: 80px;
+}
+.hr1{
+  margin-top: 70px;
+  margin-bottom: 70px;
+  border: dotted black 6px;
+  border-bottom: none;
+  width: 4%;
+}
+.doctor{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: solid;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.row-1{
+  width: 60%;
+  margin: auto;
+
+}
+.row-2{
+  width: 70%;
+  margin: auto;
+
+}
+.display3{
+  display: inline;
+  margin-right: 20px;
+  margin-left: 40px;
+}
+.footer{
+  background-color: black;
+  color: white;
+  padding-top: 10px;
+}
+.end{
+  width: 50%;
+  margin-left: 30%;
+}
+.justify-content-center{
+  padding-right: 20%;
+}
+.col-7{
+  margin-left: 80px;
+}
+.slot4{
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+.complaint{
+  background-color: black;
+}
+*{
+  font-family: 'Anton', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+ .bottom-image{
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    border: solid;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.ml11 {
+  font-weight: 700;
+  font-size: 3.5em;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
