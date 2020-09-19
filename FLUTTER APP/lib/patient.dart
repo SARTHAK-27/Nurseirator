@@ -16,6 +16,7 @@ class _patientState extends State<patient> {
         color: Colors.lightBlueAccent,
         child: ListView(
           children: [
+            Text("You are logged in"),
 
           ],
 

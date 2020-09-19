@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nurseirator/button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 class registerScreen extends StatefulWidget {
   @override
   _registerScreenState createState() => _registerScreenState();
 }
+final DBRef=FirebaseDatabase.instance.reference();
 final _auth=FirebaseAuth.instance;
 final String ml='Doctor';
 class _registerScreenState extends State<registerScreen> {
@@ -80,7 +82,7 @@ class _registerScreenState extends State<registerScreen> {
               buttonn(
                 colour: Colors.lightBlue,
                 chilld: Text('SignIn'),
-                onpress: () async {
+                /*onpress: () async {
                   print(email);
                   try {
                     final newUser = await _auth.createUserWithEmailAndPassword(
@@ -94,7 +96,8 @@ class _registerScreenState extends State<registerScreen> {
                   {
                     print(e);
                   }
-                }
+                }*/
+                onpress: (){write();},
 
               ),
             ],
@@ -102,5 +105,12 @@ class _registerScreenState extends State<registerScreen> {
         ),
       ),
     );
+  }
+  void write()
+  {
+    DBRef.child("1").set({
+      'title': 'Mastering EJB',
+      'description': 'Programming Guide for J2EE'
+    });
   }
 }
