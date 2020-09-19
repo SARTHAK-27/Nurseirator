@@ -47,7 +47,15 @@ function login(){
               window.location='login.html';
              }
               
-            })
+            }).catch(function(error){
+              var error_code = error.code;
+              var errorMessage = error.Message;
+              console.log(error_code);
+              console.log(errorMessage);
+              alert("wrong cred!");
+              window.location='login.html';
+              })
+  
 
           }
           else{
