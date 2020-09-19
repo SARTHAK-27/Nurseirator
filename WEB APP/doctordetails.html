@@ -15,7 +15,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="CSS/doctordetails.css">
-<script src="formscript.js"></script>
+<!-- <script src="formscript.js"></script> -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
 <body>
 <div class="container">
@@ -103,7 +103,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="  " class="final btn btn-warning" >Sumbit<span class="glyphicon glyphicon-send"></span></button>
+    <button type=" submit " class="final btn btn-warning" onclick=doc()>Sumbit<span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
 
@@ -111,5 +111,10 @@
 </form>
 </div>
     </div><!-- /.container -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script src="JS/firebase.js" ></script>
+    
     </body>
 </html>

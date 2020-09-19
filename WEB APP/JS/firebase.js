@@ -252,7 +252,7 @@ function nurse(){
 function doc(){
 
   
-  document.getElementById('nurse_who').addEventListener('submit',function(e){
+  document.getElementById('doctor_who').addEventListener('submit',function(e){
 
     e.preventDefault();
     
