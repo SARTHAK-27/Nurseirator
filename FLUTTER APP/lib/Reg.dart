@@ -6,8 +6,14 @@ class registration extends StatefulWidget {
   _registrationState createState() => _registrationState();
 }
 final DBRef=FirebaseDatabase.instance.reference();
+final DB=FirebaseDatabase.instance.reference().child("doctor");
 class _registrationState extends State<registration> {
   @override
+  String initial='male';
+  List gender=['male','female','others'];
+  String role='Doctor';
+  List roole=['Doctor','Nurse','Patient'];
+  String name,address,city,email,password,phone,state,zipcode;
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
@@ -37,6 +43,7 @@ class _registrationState extends State<registration> {
                 Flexible(
                   child: TextField(
                     onChanged: (value) {
+                      name=value;
                     },
                     style: TextStyle(color: Colors.black, fontSize: 15),
                     keyboardType: TextInputType.emailAddress,
@@ -64,6 +71,7 @@ class _registrationState extends State<registration> {
                 Flexible(
                   child: TextField(
                     onChanged: (value) {
+                      address=value;
                     },
                     style: TextStyle(color: Colors.black, fontSize: 15),
                     keyboardType: TextInputType.emailAddress,
@@ -91,6 +99,7 @@ class _registrationState extends State<registration> {
                 Flexible(
                   child: TextField(
                     onChanged: (value) {
+                      city=value;
                     },
                     style: TextStyle(color: Colors.black, fontSize: 15),
                     keyboardType: TextInputType.emailAddress,
@@ -118,6 +127,7 @@ class _registrationState extends State<registration> {
                 Flexible(
                   child: TextField(
                     onChanged: (value) {
+                      email=value;
                     },
                     style: TextStyle(color: Colors.black, fontSize: 15),
                     keyboardType: TextInputType.emailAddress,
@@ -143,17 +153,25 @@ class _registrationState extends State<registration> {
                       fontSize: 20),),
                 SizedBox(width: 20,),
                 Flexible(
-                  child: TextField(
-                    onChanged: (value) {
-                    },
-                    style: TextStyle(color: Colors.black, fontSize: 15),
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(color: Colors.black),
-                      hintText: 'Gender',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:8.0,right: 8.0),
+                    child: Container(
+                      decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2.0)),
+                      child: DropdownButton(
+                          hint: Text('Enter your gender'),
+                          dropdownColor: Colors.blueGrey,
+                          elevation: 5,
+                          icon: Icon(Icons.arrow_drop_down),
+                          iconSize: 30,
+                          value: initial,
+                          onChanged: (value){
+                            setState(() {
+                              initial=value;
+                            });
+                          },
+                          items:gender.map((value) {return DropdownMenuItem(
+                            value: value,
+                            child: Text(value),);}).toList()),
                     ),
                   ),
                 ),
@@ -172,6 +190,7 @@ class _registrationState extends State<registration> {
                   child: TextField(
                     obscureText: true,
                     onChanged: (value) {
+                      password=value;
                     },
                     style: TextStyle(color: Colors.black, fontSize: 15),
                     decoration: InputDecoration(
@@ -197,6 +216,7 @@ class _registrationState extends State<registration> {
                 Flexible(
                   child: TextField(
                     onChanged: (value) {
+                      phone=value;
                     },
                     style: TextStyle(color: Colors.black, fontSize: 15),
                     keyboardType: TextInputType.emailAddress,
@@ -222,18 +242,23 @@ class _registrationState extends State<registration> {
                       fontSize: 20),),
                 SizedBox(width: 45,),
                 Flexible(
-                  child: TextField(
-                    onChanged: (value) {
-                    },
-                    style: TextStyle(color: Colors.black, fontSize: 15),
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(color: Colors.black),
-                      hintText: 'Enter Your Role',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                      ),
-                    ),
+                  child: Container(
+                    decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2.0)),
+                    child: DropdownButton(
+                        hint: Text('Enter your Role'),
+                        dropdownColor: Colors.grey,
+                        elevation: 5,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 30,
+                        value: role,
+                        onChanged: (value){
+                          setState(() {
+                            role=value;
+                          });
+                        },
+                        items:roole.map((value) {return DropdownMenuItem(
+                          value: value,
+                          child: Text(value),);}).toList()),
                   ),
                 ),
 
@@ -251,6 +276,7 @@ class _registrationState extends State<registration> {
                 Flexible(
                   child: TextField(
                     onChanged: (value) {
+                      state=value;
                     },
                     style: TextStyle(color: Colors.black, fontSize: 15),
                     keyboardType: TextInputType.emailAddress,
@@ -278,6 +304,7 @@ class _registrationState extends State<registration> {
                 Flexible(
                   child: TextField(
                     onChanged: (value) {
+                      zipcode=value;
                     },
                     style: TextStyle(color: Colors.black, fontSize: 15),
                     keyboardType: TextInputType.emailAddress,
@@ -310,10 +337,71 @@ class _registrationState extends State<registration> {
   }
   void write()
   {
-    DBRef.child("1").set({
-      'id':'ID1',
-      'data':'This is a sample'
-
+    if(role=='Doctor')
+      {
+        DBRef.child("doctor").push().set({
+          'Name':name,
+          'Address':address,
+          'City':city,
+          'Email':email,
+          'Gender':initial,
+          'Password':password,
+          'Phone No':phone,
+          'Role':role,
+          'State':state,
+          'ZipCode':zipcode,
+        });
+      }
+    else if(role=='Nurse')
+    {
+      DBRef.child("nurse").push().set({
+        'Name':name,
+        'Address':address,
+        'City':city,
+        'Email':email,
+        'Gender':initial,
+        'Password':password,
+        'Phone No':phone,
+        'Role':role,
+        'State':state,
+        'ZipCode':zipcode,
+      });
+    }
+    else
+    {
+      DBRef.child("patient").push().set({
+        'Name':name,
+        'Address':address,
+        'City':city,
+        'Email':email,
+        'Gender':initial,
+        'Password':password,
+        'Phone No':phone,
+        'Role':role,
+        'State':state,
+        'ZipCode':zipcode,
+      });
+    }
+  }
+  void read()
+  {
+    DBRef.once().then((DataSnapshot dataSnapshot){
+      print(dataSnapshot.value);
+    });
+  }
+  void update()
+  {
+    DBRef.child("doctor").update({
+      'Name':name,
+      'Address':address,
+      'City':city,
+      'Email':email,
+      'Gender':initial,
+      'Password':password,
+      'Phone No':phone,
+      'Role':role,
+      'State':state,
+      'ZipCode':zipcode,
     });
   }
 }

@@ -8,10 +8,13 @@ class registerScreen extends StatefulWidget {
 }
 final DBRef=FirebaseDatabase.instance.reference();
 final _auth=FirebaseAuth.instance;
-final String ml='Doctor';
 class _registerScreenState extends State<registerScreen> {
   String email;
   String password;
+  String initial='male';
+  String role='Doctor';
+  List gender=['male','female','others'];
+  List roole=['Doctor','Nurse','Patient'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,23 +65,27 @@ class _registerScreenState extends State<registerScreen> {
                 ),
               ),
               SizedBox(height: 10,),
-              DropdownButton<String>(
-                  value: ml,
-                  items: [
-                    DropdownMenuItem(
-                      child: Text('Doctor'),
-                      value:'Doctor',
-                    ),
-                    DropdownMenuItem(
-                      child: Text('Patient'),
-                      value:'Patient',
-                    ),
-                    DropdownMenuItem(
-                      child: Text('Nurse'),
-                      value:'Nurse',
-                    ),
-                  ],
+              Padding(
+                padding: const EdgeInsets.only(left:8.0,right: 8.0),
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2.0)),
+                  child: DropdownButton(
+                    hint: Text('Enter your gender'),
+                    dropdownColor: Colors.deepOrange,
+                    elevation: 5,
+                    icon: Icon(Icons.arrow_drop_down),
+                    iconSize: 30,
+                    value: initial,
+                      onChanged: (value){
+                      setState(() {
+                        initial=value;
+                      });
+                      },
+                  items:gender.map((value) {return DropdownMenuItem(
+                    value: value,
+                    child: Text(value),);}).toList()),
                 ),
+              ),
               buttonn(
                 colour: Colors.lightBlue,
                 chilld: Text('SignIn'),
