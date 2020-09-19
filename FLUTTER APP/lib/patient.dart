@@ -8,6 +8,8 @@ class patient extends StatefulWidget {
 
 class _patientState extends State<patient> {
   @override
+  String initial='one week ago';
+  List test=['one week ago','one month ago','more than a month ago'];
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
@@ -210,6 +212,36 @@ class _patientState extends State<patient> {
 
                 ],
               ),
+            ),
+            SizedBox(height: 10,),
+            Row(
+              children: [
+                Text("Last Corona Test",
+                style: TextStyle(fontWeight: FontWeight.bold,
+                fontSize: 15),),
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:8.0,right: 8.0),
+                    child:Container(
+                    decoration: BoxDecoration(border: Border.all(color: Colors.black,width: 2.0)),
+                    child: DropdownButton(
+                        hint: Text('When was Last Corona Test'),
+                        dropdownColor: Colors.blueGrey,
+                        elevation: 5,
+                        icon: Icon(Icons.arrow_drop_down),
+                        iconSize: 20,
+                        value: initial,
+                        onChanged: (value){
+                          setState(() {
+                            initial=value;
+                          });
+                        },
+                        items:test.map((value) {return DropdownMenuItem(
+                          value: value,
+                          child: Text(value),);}).toList()),
+                  ),),
+                ),
+              ],
             ),
 
           ],
