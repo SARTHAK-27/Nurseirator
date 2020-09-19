@@ -18,7 +18,17 @@ function login(){
 
     e.preventDefault();
 
-  
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    
+
+    
   
   
   
@@ -30,6 +40,27 @@ function login(){
 }
 
 function signup(){
+
+  document.getElementById('').addEventListener('',function(e){
+
+    e.preventDefault();
+
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    var first_name = document.getElementById('');
+    
+
+    
+  
+  
+  
+  
+  });
 
 
 }
