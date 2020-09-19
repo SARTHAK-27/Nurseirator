@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="./CSS/patient.css">
 </head>
-    <body>
+    <body onload=display_patient()>
       <div class="container" id="ct">
         <h1 class="display1 ">NurseiRaTor</h1>
         <button type="button" name="button" class="bt"  onclick=logout()>Log Out</button>
@@ -20,13 +20,13 @@
                       <div class="container">
                           <div class="front" style="background-image: url('customer1.jpg')">
                               <div class="inner">
-                                  <p>MR. ROY</p>
-                    <span>Fever</span>
+                                  <p >Monday</p>
+                    <span></span>
                               </div>
                           </div>
                           <div class="back">
                               <div class="inner">
-                                <p>Details</p>
+                                <p id="mon" ></p>
                               </div>
                           </div>
                       </div>
@@ -35,13 +35,13 @@
                       <div class="container">
                           <div class="front" style="background-image: url('customer2.jpg')">
                               <div class="inner">
-                                  <p>MRS. SEN</p>
-                    <span>Body pain</span>
+                                  <p>Tueday</p>
+                    <span></span>
                               </div>
                           </div>
                           <div class="back">
                               <div class="inner">
-                                <p>Details</p>
+                                <p id="tue"></p>
                               </div>
                           </div>
                       </div>
@@ -50,13 +50,13 @@
                       <div class="container">
                           <div class="front" style="background-image: url('customer1.jpg')">
                               <div class="inner">
-                                  <p>MR. SHARMA</p>
-                    <span>Stomach Infection</span>
+                                  <p>Wednesday</p>
+                    <span></span>
                               </div>
                           </div>
                           <div class="back">
                               <div class="inner">
-                                <p>Details</p>
+                                <p id="wed"></p>
                               </div>
                           </div>
                       </div>
@@ -65,13 +65,13 @@
                       <div class="container">
                           <div class="front" style="background-image: url('customer2.jpg')">
                               <div class="inner">
-                                  <p>MRS. GUPTA</p>
-                    <span>Chicken Pox</span>
+                                  <p>Thursday</p>
+                    <span></span>
                               </div>
                           </div>
                           <div class="back">
                               <div class="inner">
-                                <p>Details</p>
+                                <p id="thus"></p>
                               </div>
                           </div>
                       </div>
@@ -80,13 +80,13 @@
                       <div class="container">
                           <div class="front" style="background-image: url('customer1.jpg')">
                               <div class="inner">
-                                  <p>MR. SINGH</p>
-                    <span>Fever</span>
+                                  <p>friday</p>
+                    <span></span>
                               </div>
                           </div>
                           <div class="back">
                               <div class="inner">
-                                <p>Details</p>
+                                <p id="fri"></p>
                               </div>
                           </div>
                       </div>
@@ -95,13 +95,13 @@
                       <div class="container">
                           <div class="front" style="background-image:url('customer2.jpg')">
                               <div class="inner">
-                                  <p>MRS. KUMAR</p>
-                    <span>COVID Test</span>
+                                  <p>Saturday</p>
+                    <span> </span>
                               </div>
                           </div>
                           <div class="back">
                               <div class="inner">
-                                  <p>Details</p>
+                                  <p id="sat"></p>
                               </div>
                           </div>
                       </div>
@@ -110,13 +110,13 @@
                       <div class="container">
                           <div class="front" style="background-image: url('customer1.jpg')">
                               <div class="inner">
-                                  <p>MR. KUMAR</p>
-                    <span>Fracture</span>
+                                  <p>Sunday</p>
+                    <span></span>
                               </div>
                           </div>
                           <div class="back">
                               <div class="inner">
-                                  <p>Details</p>
+                                  <p id="sun"></p>
                               </div>
                           </div>
                       </div>

@@ -346,7 +346,54 @@ function med(){
 //Display Information about patient in Patient html
 function display_patient(){
 
+  firebase.auth().onAuthStateChanged(user => {
 
+    if(user){
+
+        uid=  user.uid;
+
+        var name=document.getElementById('patient_name');
+        var mon=document.getElementById('mon');
+        var tue=document.getElementById('tue');
+        var wed=document.getElementById('wed');
+        var thus=document.getElementById('thus');
+        var fri=document.getElementById('fri');
+        var sat=document.getElementById('sat');
+        var sun=document.getElementById('sun');
+
+        
+        firebase.database().ref('patient/'+uid).once("value",snap=>{
+
+          name.innerHTML = snap.val().First_Name +" "+snap.val().Last_Name 
+
+        }).then(function(response){
+
+            firebase.database().ref('Medi/'+uid).once("value",snap=>{
+
+              mon.innerHTML = snap.val().Monday;
+              tue.innerHTML = snap.val().Tuesday;
+              wed.innerHTML = snap.val().Wednesday;
+              thus.innerHTML = snap.val().Thursday;
+              fri.innerHTML = snap.val().Friday;
+              sat.innerHTML = snap.val().Saturday;
+              sun.innerHTML = snap.val().Sunday;
+
+            });
+
+
+        });
+
+      
+
+    }else{
+
+      alert("No active user");
+      window.location='main.html';
+    }
+
+
+
+  });
 
 
 
