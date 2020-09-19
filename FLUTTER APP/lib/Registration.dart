@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:nurseirator/button.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 class registerScreen extends StatefulWidget {
   @override
   _registerScreenState createState() => _registerScreenState();
 }
+final _auth=FirebaseAuth.instance;
 final String ml='Doctor';
 class _registerScreenState extends State<registerScreen> {
+  String email;
+  String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +32,7 @@ class _registerScreenState extends State<registerScreen> {
                     fontSize: 40),),
               TextField(
                 onChanged: (value) {
+                  email=value;
                 },
                 style: TextStyle(color: Colors.white, fontSize: 25),
                 keyboardType: TextInputType.emailAddress,
@@ -43,6 +48,7 @@ class _registerScreenState extends State<registerScreen> {
               TextField(
                 obscureText: true,
                 onChanged: (value) {
+                  password=value;
                 },
                 style: TextStyle(color: Colors.white, fontSize: 25),
                 decoration: InputDecoration(
@@ -74,7 +80,22 @@ class _registerScreenState extends State<registerScreen> {
               buttonn(
                 colour: Colors.lightBlue,
                 chilld: Text('SignIn'),
-                onpress: (){},
+                onpress: () async {
+                  print(email);
+                  try {
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password);
+                    if(newUser!=null)
+                      {
+                        Navigator.pushNamed(context, '/');
+                      }
+                  }
+                  catch(e)
+                  {
+                    print(e);
+                  }
+                }
+
               ),
             ],
           ),
