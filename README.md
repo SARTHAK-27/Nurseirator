@@ -42,10 +42,10 @@ Pull Requests are always welcome.
 
 MIT © 
 
-This project is licensed under the MIT License - see the [License.md](https://github.com/Nurseirator/blob/master/License.md) file for details
+This project is licensed under the MIT License - see the [License.md](https://github.com/SARTHAK-27/Nurseirator/blob/master/License.md) file for details
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 <p align="center">
-	Made with :heart: 
+	Made with :heart: by <a href="https://.in">HASICS</a>
 </p>
