@@ -11,33 +11,57 @@ var firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
 
-
+//LOGIN FIREBASE FUNCTION
 function login(){
 
   document.getElementById('').addEventListener('',function(e){
 
     e.preventDefault();
 
-    var first_name = document.getElementById('');
-    var first_name = document.getElementById('');
-    var first_name = document.getElementById('');
-    var first_name = document.getElementById('');
-    var first_name = document.getElementById('');
-    var first_name = document.getElementById('');
-    var first_name = document.getElementById('');
-    var first_name = document.getElementById('');
-    
+    var mail = document.getElementById('');
+    var pass = document.getElementById('');
+    var desig = document.getElementById('');
+   
+    firebase.auth().signInWithEmailAndPassword(mail.value, pass.value)
+      .then(function(response){
 
-    
-  
-  
+        console.log("Successfull"),
+        firebase.auth().onAuthStateChanged(user =>{
+
+          if(user){
+
+
+            firebase.database().ref(desig.value+'\/'+user.uid).once("value",snap=>{
+
+             if(snap.val().role == desig.value){
+               window.location = desig.value+'.html';
+             }
+
+             else{
+               alert("wrong credentials! ");
+               window.location='login.html';
+             }
+              
+            })
+
+          }
+          else{
+            alert("No user logged in!");
+            window.location= 'main.html';
+
+          }
+
+
+        })
+
+      });
   
   
   });
 
-
-
 }
+
+
 
 function signup(){
 
@@ -53,16 +77,8 @@ function signup(){
     var first_name = document.getElementById('');
     var first_name = document.getElementById('');
     var first_name = document.getElementById('');
-    
-
-    
-  
-  
-  
   
   });
-
-
 }
 
 function logout(){
