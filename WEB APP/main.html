@@ -14,7 +14,7 @@
 <script src="main.js"></script>
 
 </script>
-    <title>NurseiRaTor</title>
+    <title>Nurseirator</title>
   </head>
   <body>
 <!-- Container element -->
@@ -23,7 +23,7 @@
     <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="" loading="lazy">
   </a>
   <a class="navbar-brand" href="#">
-    <h1 class="company-name display-5">NurseiRaTor</h1>
+    <h1 class="company-name display-5">Nurseirator</h1>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -114,6 +114,19 @@
      <br>
    </div>
 </div>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "5510e3bc-3338-4953-b6c8-0c1de2be0e98", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "b0c2a647-8288-4b59-9757-940c9d3c6c77", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
   <footer class="footer">
   <div class="container end">
           <div class="row">
