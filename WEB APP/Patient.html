@@ -1,0 +1,344 @@
+<html>
+<head>
+  <title>
+    PATIENT PAGE
+  </title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./CSS/patient.css">
+</head>
+    <body>
+      <div class="container" id="ct">
+        <h1 class="display1 ">NurseiRaTor</h1>
+        <button type="button" name="button" class="bt"  onclick=logout()>Log Out</button>
+
+      </div>
+
+<div class="wrapper" id="main">
+        <h1 class="display4"style="text-transform: capitalize;">WELCOME <span id="patient_name" ></span></h1>
+        <div class="cols">
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer1.jpg')">
+                              <div class="inner">
+                                  <p>MR. ROY</p>
+                    <span>Fever</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer2.jpg')">
+                              <div class="inner">
+                                  <p>MRS. SEN</p>
+                    <span>Body pain</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer1.jpg')">
+                              <div class="inner">
+                                  <p>MR. SHARMA</p>
+                    <span>Stomach Infection</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer2.jpg')">
+                              <div class="inner">
+                                  <p>MRS. GUPTA</p>
+                    <span>Chicken Pox</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer1.jpg')">
+                              <div class="inner">
+                                  <p>MR. SINGH</p>
+                    <span>Fever</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image:url('customer2.jpg')">
+                              <div class="inner">
+                                  <p>MRS. KUMAR</p>
+                    <span>COVID Test</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer1.jpg')">
+                              <div class="inner">
+                                  <p>MR. KUMAR</p>
+                    <span>Fracture</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+           </div>
+
+           <div class="container">
+             <!-- Trigger the modal with a button -->
+             <button type="button" class="btn btn-md but" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+             <!-- Modal -->
+             <div class="modal fade" id="myModal" role="dialog">
+               <div class="modal-dialog">
+
+                 <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h2 class="modal-title">Details</h2>
+                   </div>
+                   <div class="modal-body">
+
+           <form action="/action_page.php">
+             <label for="fname">Treatment :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Corona Test :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Monday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Tuesday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Wednesday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Thursday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Friday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Saturday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Sunday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <input type="submit" value="Submit">
+           </form>
+
+           <p>Click on the submit button to submit the form.</p>
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+
+           </div>
+           <div class="container">
+             <!-- Trigger the modal with a button -->
+             <button type="button" class="btn btn-md but" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+             <!-- Modal -->
+             <div class="modal fade" id="myModal" role="dialog">
+               <div class="modal-dialog">
+
+                 <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h2 class="modal-title">Details</h2>
+                   </div>
+                   <div class="modal-body">
+
+           <form action="/action_page.php">
+             <label for="fname">Treatment :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Corona Test :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Monday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Tuesday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Wednesday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Thursday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Friday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Saturday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Sunday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <input type="submit" value="Submit">
+           </form>
+
+           <p>Click on the submit button to submit the form.</p>
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+
+           </div>
+           <div class="container">
+             <!-- Trigger the modal with a button -->
+             <button type="button" class="btn btn-md but" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+             <!-- Modal -->
+             <div class="modal fade" id="myModal" role="dialog">
+               <div class="modal-dialog">
+
+                 <!-- Modal content-->
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h2 class="modal-title">Details</h2>
+                   </div>
+                   <div class="modal-body">
+
+           <form action="/action_page.php">
+             <label for="fname">Treatment :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Corona Test :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Monday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Tuesday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Wednesday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Thursday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Friday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <label for="lname">Saturday :</label>
+             <input type="text" id="lname" name="lname"><br><br>
+             <label for="fname">Sunday :</label>
+             <input type="text" id="fname" name="fname"><br><br>
+             <input type="submit" value="Submit">
+           </form>
+
+           <p>Click on the submit button to submit the form.</p>
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+
+           </div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+            </div>
+            <div class = "col1">
+
+            </div>
+            <div class = "col3">
+
+            </div>
+            <div class = "col1">
+
+            </div>
+            <div class="col3">
+
+            </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="JS/firebase.js" ></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+
+
+<script>
+    firebase.auth().onAuthStateChanged(user => {
+        if(user) {
+        console.log("active");
+        uid = user.uid;
+
+        var Name = document.getElementById('patient_name');
+
+        firebase.database().ref('Patient/'+user.uid).once("value",snap =>{
+
+            if(snap.val().role=="Patient") {
+            name =  snap.val().Name,
+            Name.innerHTML = name
+        }
+
+        else{
+            firebase.auth().signOut();
+            window.location='main.html';
+        }
+
+        });
+
+        }
+        else{
+            alert("no active user!");
+            window.location = "login.html";
+
+        }
+
+      });
+
+</script>
+</body>
+</html>

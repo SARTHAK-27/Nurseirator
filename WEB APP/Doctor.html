@@ -1,0 +1,172 @@
+<html>
+<head>
+  <title>
+    DOCTOR PAGE
+  </title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./CSS/doctor.css">
+</head>
+    <body>
+      <div class="container" id="ct">
+        <h1 class="display1 ">NurseiRaTor</h1>
+        <button type="submit" name="button" class="bt"  onclick=logout()>Log Out</button>
+
+      </div>
+
+<div class="wrapper" id="main">
+        <h1 class="display4">WELCOME DR. RAO,THE PATIENT APPOINTED FOR TODAY ARE:</h1>
+        <div class="cols">
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer1.jpg')">
+                              <div class="inner">
+                                  <p>MR. ROY</p>
+                    <span>Fever</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer2.jpg')">
+                              <div class="inner">
+                                  <p>MRS. SEN</p>
+                    <span>Body pain</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer1.jpg')">
+                              <div class="inner">
+                                  <p>MR. SHARMA</p>
+                    <span>Stomach Infection</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer2.jpg')">
+                              <div class="inner">
+                                  <p>MRS. GUPTA</p>
+                    <span>Chicken Pox</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer1.jpg')">
+                              <div class="inner">
+                                  <p>MR. SINGH</p>
+                    <span>Fever</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image:url('customer2.jpg')">
+                              <div class="inner">
+                                  <p>MRS. KUMAR</p>
+                    <span>COVID Test</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col" ontouchstart="this.classList.toggle('hover');">
+                      <div class="container">
+                          <div class="front" style="background-image: url('customer1.jpg')">
+                              <div class="inner">
+                                  <p>MR. KUMAR</p>
+                    <span>Fracture</span>
+                              </div>
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>Details</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+           </div>
+    <div class="fixed-footer">
+       <div class="container">
+          Copyright & copy ; 2020 NurseiRaTor
+       </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="JS/firebase.js" ></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    
+    <script>
+        firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+            console.log("active");
+            uid = user.uid;
+            
+            var Name = document.getElementById('patient_name');
+        
+            firebase.database().ref('Doctor/'+user.uid).once("value",snap =>{
+                
+                if(snap.val().role=="Doctor") {   
+                name =  snap.val().Name,
+                Name.innerHTML = name
+            }
+    
+            else{
+                firebase.auth().signOut();
+                window.location='main.html';
+            }
+               
+            });
+            
+            }
+            else{
+                alert("no active user!");
+                window.location = "login.html"
+        
+            }
+        
+          });
+        
+    </script>
+
+</body>
+</html>
