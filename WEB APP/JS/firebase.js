@@ -200,6 +200,103 @@ function med_First(){
   });
 }
 
+
+//FUNCTION TO ADD Nurse details FOR FIRST TIME
+
+function nurse(){
+
+  
+  document.getElementById('nurse_who').addEventListener('submit',function(e){
+
+    e.preventDefault();
+    
+    var licno = document.getElementById('lino');  
+    var hospital= document.getElementById('Hospital');    
+    var covid = document.getElementById('covid');  
+    var afro= document.getElementById('afro');
+    var ato = document.getElementById('ato');  
+    
+    firebase.auth().onAuthStateChanged(user => {
+      if(user) {
+        console.log("hi");
+        firebase.database().ref('nurse/'+user.uid+'/extra').set({
+
+        License_no:licno.value,
+        Hospital:hospital.value,
+        covid_test:covid.value,
+        avail_from:afro.value,
+        avail_to:ato.value})
+          .then(function(response){
+            
+            console.log("details Added!"),
+            window.location='nurse.html';
+
+        });
+      }
+      
+      else{
+
+      alert("NO user!!");
+      window.location='main.html';
+      }
+
+    });
+  
+  });
+}
+
+
+
+
+//FUNCTION TO ADD doctor details FOR FIRST TIME
+function doc(){
+
+  
+  document.getElementById('nurse_who').addEventListener('submit',function(e){
+
+    e.preventDefault();
+    
+    var licno = document.getElementById('lino');  
+    var hospital= document.getElementById('Hospital');    
+    var covid = document.getElementById('covid');  
+    var afro= document.getElementById('afro');
+    var ato = document.getElementById('ato');  
+    
+    firebase.auth().onAuthStateChanged(user => {
+      if(user) {
+        console.log("hi");
+        firebase.database().ref('doctor/'+user.uid+'/extra').set({
+
+        License_no:licno.value,
+        Hospital:hospital.value,
+        covid_test:covid.value,
+        avail_from:afro.value,
+        avail_to:ato.value})
+          .then(function(response){
+            
+            console.log("details Added!"),
+            window.location='doctor.html';
+
+        });
+      }
+      
+      else{
+
+      alert("NO user!!");
+      window.location='main.html';
+      }
+
+    });
+  
+  });
+}
+
+
+
+
+
+
+
 //FUNCTION TO update MEDICINE 
 
 function med(){
