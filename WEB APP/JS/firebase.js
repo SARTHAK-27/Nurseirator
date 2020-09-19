@@ -121,16 +121,64 @@ function signup(){
   });
 }
 
+
+//FUNCTION TO LOGOUT USERS
 function logout(){
 
   firebase.auth().onAuthStateChanged(user => {
     if(user){
       firebase.auth().signOut();
-      window.location = '.html'; 
+      window.location = 'main.html'; 
     }
   
   });
-
-
 }
+
+
+//FUNCTION TO ADD MEDICINE FOR FIRST TIME
+
+function med_First(){
+
+  
+  document.getElementById('').addEventListener('',function(e){
+
+    e.preventDefault();
+    
+    var mon = document.getElementById('mon');  
+    var tues= document.getElementById('tue');    
+    var wed = document.getElementById('wed');  
+    var thus= document.getElementById('thus');
+    var fri = document.getElementById('fri');  
+    var sat= document.getElementById('sat');
+    var sun = document.getElementById('sun');
+
+    firebase.auth().onAuthStateChanged(user => {
+      if(user) {
+        Firebase.database().ref('Medi/'+user.Messageuid).set({
+
+          Monday    :mon.value,
+          Tuesday   :tues.value,
+          Wednesday :wed.value,
+          Thursday  :thus.value,
+          Friday    :fri.value,
+          Saturday  :sat.value,
+          Sunday    :sun.value})
+          .then(function(response){
+            
+            console.log("Medicine Added!"),
+            window.location='.html';
+
+        });
+      }
+      
+      else{
+
+      
+      }
+
+    });
+  
+  });
+}
+
 
