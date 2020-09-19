@@ -40,7 +40,7 @@ Pull Requests are always welcome.
 
 ## License
 
-MIT © 
+MIT © HASICS
 
 This project is licensed under the MIT License - see the [License.md](https://github.com/SARTHAK-27/Nurseirator/blob/master/License.md) file for details
 
