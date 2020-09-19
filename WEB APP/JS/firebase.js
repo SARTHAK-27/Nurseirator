@@ -181,4 +181,75 @@ function med_First(){
   });
 }
 
+//FUNCTION TO update MEDICINE 
+
+function med(){
+
+  
+  document.getElementById('').addEventListener('',function(e){
+
+    e.preventDefault();
+    
+    var mon = document.getElementById('mon');  
+    var tues= document.getElementById('tue');    
+    var wed = document.getElementById('wed');  
+    var thus= document.getElementById('thus');
+    var fri = document.getElementById('fri');  
+    var sat= document.getElementById('sat');
+    var sun = document.getElementById('sun');
+
+    firebase.auth().onAuthStateChanged(user => {
+      if(user) {
+        Firebase.database().ref('Medi/'+user.Messageuid).set({
+
+          Monday    :mon.value,
+          Tuesday   :tues.value,
+          Wednesday :wed.value,
+          Thursday  :thus.value,
+          Friday    :fri.value,
+          Saturday  :sat.value,
+          Sunday    :sun.value})
+          .then(function(response){
+            
+            console.log("Medicine Updatd!"),
+            window.location='.html';
+
+        });
+      }
+      
+      else{
+
+      
+      }
+
+    });
+  
+  });
+}
+
+
+//Display Information about patient in Patient html
+function display_patient(){
+
+
+
+
+
+}
+
+//Display Information about patient in Nurse html
+function display_Nurse(){
+
+
+
+
+
+}
+
+//Display Information about patient in doctor html
+function display_Doctor(){
+
+
+}
+
 
