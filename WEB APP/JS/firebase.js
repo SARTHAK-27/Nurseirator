@@ -14,13 +14,13 @@ var firebaseConfig = {
 //LOGIN FIREBASE FUNCTION
 function login(){
 
-  document.getElementById('').addEventListener('',function(e){
+  document.getElementById('login').addEventListener('submit',function(e){
 
     e.preventDefault();
 
-    var mail = document.getElementById('');
-    var pass = document.getElementById('');
-    var desig = document.getElementById('');
+    var mail = document.getElementById('mail');
+    var pass = document.getElementById('paswd');
+    var desig = document.getElementById('role');
    
     firebase.auth().signInWithEmailAndPassword(mail.value, pass.value)
       .then(function(response){
@@ -52,8 +52,6 @@ function login(){
           }
         })
       });
-  
-  
   });
 
 }
@@ -62,21 +60,21 @@ function login(){
 //FUNCTION FOR SIGNUP FIREBASE
 function signup(){
 
-  document.getElementById('').addEventListener('',function(e){
+  document.getElementById('Signup').addEventListener('submit',function(e){
 
     e.preventDefault();
 
-    var first_name = document.getElementById('');
-    var last_name = document.getElementById('');
-    var pass= document.getElementById('');
-    var mail = document.getElementById('');
-    var ph= document.getElementById('');
-    var adr= document.getElementById('');
-    var cty= document.getElementById('');
-    var ste= document.getElementById('');
-    var zip_code= document.getElementById('');
-    var sex= document.getElementById('');
-    var designation= document.getElementById('');
+    var first_name = document.getElementById('first_name');
+    var last_name = document.getElementById('last_name');
+    var pass= document.getElementById('paswd');
+    var mail = document.getElementById('mail');
+    var ph= document.getElementById('phone');
+    var adr= document.getElementById('address');
+    var cty= document.getElementById('City');
+    var ste= document.getElementById('state');
+    var zip_code= document.getElementById('code');
+    var sex= document.getElementById('gender');
+    var desig= document.getElementById('role');
     var full_name = first_name.value+' '+last_name.value;
 
     firebase.auth().createUserWithEmailAndPassword(mail.value,pass.value)
@@ -99,7 +97,7 @@ function signup(){
             })
             .then(function(response){
               console.log("Added succesfully")
-              window.location='.html'
+              window.location=desig.value+'details.html'
 
           }).catch(function(error){
             var error_code = error.code;
