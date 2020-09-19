@@ -25,21 +25,26 @@ function login(){
     firebase.auth().signInWithEmailAndPassword(mail.value, pass.value)
       .then(function(response){
 
-        console.log("Successfull"),
+        console.log("Successfull",response),
         firebase.auth().onAuthStateChanged(user =>{
 
           if(user){
 
-
+            console.log(user.role);
+          
             firebase.database().ref(desig.value+'\/'+user.uid).once("value",snap=>{
-
-             if(desig.value.localeCompare(snap.val().role)==0){
+              
+             if(snap.val().role!=null){
                window.location = desig.value+'.html';
              }
 
-             else{
+             else if(snap.val().role==null){
                alert("wrong credentials! ");
                window.location='login.html';
+             }
+             else{
+              alert("wrong credentials! ");
+              window.location='login.html';
              }
               
             })
@@ -82,7 +87,7 @@ function signup(){
 
           uid = firebase.auth().currentUser.uid,
           firebase.database().ref(desig.value+'\/'+uid).set({
-
+            Userid      :uid,
             First_Name  :first_name.value,
             Last_Name   :last_name.value,
             Email       :mail.value,
