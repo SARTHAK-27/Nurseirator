@@ -27,7 +27,7 @@ class welcomeScreen extends StatelessWidget {
                   fontSize: 30,
                   color: Colors.black),),
                   colour: Colors.lightBlue,
-                  onpress: (){Navigator.pushNamed(context,'/register');},
+                  onpress: (){Navigator.pushNamed(context,'/reg');},
                 ),
               ),
               SizedBox(height: 40,),
