@@ -12,3 +12,19 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
 
+function login(){
+
+
+}
+
+function signup(){
+
+
+}
+
+function logout(){
+
+
+
+}
+
