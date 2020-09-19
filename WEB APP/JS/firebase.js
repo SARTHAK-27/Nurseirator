@@ -14,13 +14,13 @@ var firebaseConfig = {
 //LOGIN FIREBASE FUNCTION
 function login(){
 
-  document.getElementById('').addEventListener('',function(e){
+  document.getElementById('login').addEventListener('submit',function(e){
 
     e.preventDefault();
 
-    var mail = document.getElementById('');
-    var pass = document.getElementById('');
-    var desig = document.getElementById('');
+    var mail = document.getElementById('mail');
+    var pass = document.getElementById('paswd');
+    var desig = document.getElementById('role');
    
     firebase.auth().signInWithEmailAndPassword(mail.value, pass.value)
       .then(function(response){
@@ -62,7 +62,7 @@ function login(){
 //FUNCTION FOR SIGNUP FIREBASE
 function signup(){
 
-  document.getElementById('').addEventListener('',function(e){
+  document.getElementById('Signup').addEventListener('submit',function(e){
 
     e.preventDefault();
 
