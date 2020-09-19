@@ -33,7 +33,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="Licence Number" class="form-control"  type="text">
+  <input  name="first_name" placeholder="Licence Number" class="form-control"  type="text" id="lino">
     </div>
   </div>
 </div>
@@ -45,7 +45,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="address" placeholder="Hospital Name" class="form-control" type="text">
+  <input name="address" placeholder="Hospital Name" class="form-control" type="text" id="Hospital">
     </div>
   </div>
 </div>
@@ -68,10 +68,11 @@
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="fa fa-drivers-license-o"></i></span>
-    <select name="state" class="form-control selectpicker" >
+    <select name="state" class="form-control selectpicker"  id="covid">
       <option value=" " >Please Select Your Corona Test Report</option>
-     <option>Positive	</option>
-     <option>Negative	</option>
+     <option value="positive">Positive	</option>
+     <option value="negative">Negative	</option>
+     <option value="notdone">Not Tested	</option>
 
     </select>
   </div>
@@ -85,7 +86,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="Speciality" class="form-control"  type="text">
+  <input  name="first_name" placeholder="Speciality" class="form-control"  type="text" id="Speciality">
     </div>
   </div>
 </div>

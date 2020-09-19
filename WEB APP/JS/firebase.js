@@ -259,8 +259,8 @@ function doc(){
     var licno = document.getElementById('lino');  
     var hospital= document.getElementById('Hospital');    
     var covid = document.getElementById('covid');  
-    var afro= document.getElementById('afro');
-    var ato = document.getElementById('ato');  
+    var speciality= document.getElementById('Speciality');
+   
     
     firebase.auth().onAuthStateChanged(user => {
       if(user) {
@@ -270,8 +270,7 @@ function doc(){
         License_no:licno.value,
         Hospital:hospital.value,
         covid_test:covid.value,
-        avail_from:afro.value,
-        avail_to:ato.value})
+        speciality:speciality.value})
           .then(function(response){
             
             console.log("details Added!"),
