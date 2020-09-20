@@ -20,7 +20,7 @@ String def2='00';
 List deefe2=['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59'];
 class _nurseState extends State<nurse> {
   final _auth = FirebaseAuth.instance;
-  String lis,hos;
+  String lis,hos,name;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +38,35 @@ class _nurseState extends State<nurse> {
             ),
             SizedBox(
               height: 20,
+            ),
+            Container(
+              child: Row(
+                children: [
+                  Text(
+                    'Name',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: 25,
+                  ),
+                  Flexible(
+                    child: TextField(
+                      onChanged: (value) {
+                        name=value;
+                      },
+                      style: TextStyle(color: Colors.black, fontSize: 15),
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(color: Colors.black),
+                        hintText: 'Enter Your Medical License No',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             Container(
               child: Row(
@@ -301,6 +330,7 @@ class _nurseState extends State<nurse> {
             colour: Colors.grey,
             onpress: (){
               write();
+              Navigator.pushNamed(context, '/avail');
             },)
           ],
         ),
@@ -312,6 +342,7 @@ class _nurseState extends State<nurse> {
     User user = _auth.currentUser;
     var uid = user.uid;
     DBRef.child("available").child(uid).set({
+      'name':name,
       'License':lis,
       'hospital':hos,
       'from':defaul1+defaul2,

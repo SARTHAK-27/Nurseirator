@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nurseirator/button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
+import 'package:nurseirator/medicine.dart';
+import 'package:firebase_database/firebase_database.dart';
 class loginScreen extends StatefulWidget {
   @override
   _loginScreenState createState() => _loginScreenState();
@@ -11,7 +13,7 @@ bool showSpinner = false;
 String email;
 String password;
 class _loginScreenState extends State<loginScreen> {
-
+  var mon,tue,wed,thu,fri,sat,sun;
 
   @override
   Widget build(BuildContext context) {
@@ -78,8 +80,48 @@ class _loginScreenState extends State<loginScreen> {
                       print(email);
                       if(user!=null)
                       {
-                        Navigator.pushNamed(context, '/medicine');
-                        print(email);
+                        User us=_auth.currentUser;
+                        var uid=us.uid;
+                        print(uid);
+                        final ref=FirebaseDatabase.instance.reference();
+                        dataa();
+                        User user = _auth.currentUser;
+                        print(uid);
+                        ref.child('Medi').child(uid).child('Monday').once().then((DataSnapshot dataSnapshot) {
+                          mon=dataSnapshot.value;
+
+                        });
+                        ref.child('Medi').child(uid).child('Tuesday').once().then((DataSnapshot dataSnapshot) {
+                          tue=dataSnapshot.value;
+
+                        });
+                        ref.child('Medi').child(uid).child('Wednesday').once().then((DataSnapshot dataSnapshot) {
+                          wed=dataSnapshot.value;
+
+                        });
+                        ref.child('Medi').child(uid).child('Thursday').once().then((DataSnapshot dataSnapshot) {
+                          thu=dataSnapshot.value;
+
+                        });
+                        ref.child('Medi').child(uid).child('Friday').once().then((DataSnapshot dataSnapshot) {
+                          fri=dataSnapshot.value;
+
+                        });
+                        ref.child('Medi').child(uid).child('Saturday').once().then((DataSnapshot dataSnapshot) {
+                          sat=dataSnapshot.value;
+
+                        });
+                        ref.child('Medi').child(uid).child('Sunday').once().then((DataSnapshot dataSnapshot) {
+                          sun=dataSnapshot.value;
+
+                        });
+
+                        /*Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => medical(uu: us.uid,mon: mon,tue: tue,wed: wed,thu: thu,fri: fri,sat: sat,sun: sun,),
+                            ));*/
+                        print("mos is"+'$mon');
                       }
                       setState(() {
                         showSpinner = false;
@@ -103,4 +145,39 @@ class _loginScreenState extends State<loginScreen> {
       ),
     );
   }
+void dataa()
+  {
+    User user = _auth.currentUser;
+    var uid = user.uid;
+    print(uid);
+    ref.child('Medi').child(uid).child('Monday').once().then((DataSnapshot dataSnapshot) {
+      mon=dataSnapshot.value;
+
+    });
+    ref.child('Medi').child(uid).child('Tuesday').once().then((DataSnapshot dataSnapshot) {
+      tue=dataSnapshot.value;
+
+    });
+    ref.child('Medi').child(uid).child('Wednesday').once().then((DataSnapshot dataSnapshot) {
+      wed=dataSnapshot.value;
+
+    });
+    ref.child('Medi').child(uid).child('Thursday').once().then((DataSnapshot dataSnapshot) {
+      thu=dataSnapshot.value;
+
+    });
+    ref.child('Medi').child(uid).child('Friday').once().then((DataSnapshot dataSnapshot) {
+      fri=dataSnapshot.value;
+
+    });
+    ref.child('Medi').child(uid).child('Saturday').once().then((DataSnapshot dataSnapshot) {
+      sat=dataSnapshot.value;
+
+    });
+    ref.child('Medi').child(uid).child('Sunday').once().then((DataSnapshot dataSnapshot) {
+      sun=dataSnapshot.value;
+
+    });
+  }
+
 }
