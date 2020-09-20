@@ -403,13 +403,75 @@ function display_patient(){
 function display_Nurse(){
 
 
+  firebase.auth().onAuthStateChanged(user => {
 
+    if(user){
+      uid=  user.uid;
+
+      var name = document.getElementById('nurse_name');
+
+      firebase.database().ref('nurse/'+uid).once("value",snap=>{
+
+        name.innerHTML = snap.val().First_Name +" "+ snap.val().Last_Name;
+      }).then(function(response){
+
+
+
+
+
+      })
+
+
+    }
+    else{
+
+      alert("No active user");
+      window.location='main.html';
+
+
+    }
+  
+  
+  });
 
 
 }
 
 //Display Information about patient in doctor html
 function display_Doctor(){
+
+
+  firebase.auth().onAuthStateChanged(user => {
+
+    if(user){
+      uid=  user.uid;
+
+      var name = document.getElementById('doctor_name');
+
+      firebase.database().ref('doctor/'+uid).once("value",snap=>{
+
+        name.innerHTML = snap.val().First_Name +" "+ snap.val().Last_Name;
+      }).then(function(response){
+
+
+        
+
+
+      })
+
+
+    }
+    else{
+
+      alert("No active user");
+      window.location='main.html';
+
+
+    }
+  
+  
+  });
+
 
 
 }
