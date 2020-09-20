@@ -8,15 +8,53 @@ The application aims to provide online consultance and healthcare, booking appoi
 
 ## Features
 
-1️⃣ Interactive application
+1️⃣ Interactive website and Flutter application
+
+## Nurseirator Flutter Application
+
+<p align="center">
+  <img src="images/.png" width="623" height="628">
+</p>
+<p align="center">
+  <img src="images/.png" width="623" height="628">
+</p>
+<p align="center">
+  <img src="images/.png" width="623" height="628">
+</p>
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>
 
 2️⃣ Congenial Chatbot to assist users with their queries and provide remedies for fever, headache, rash, Diarrhoea-like symptoms, Covid-19 symptoms, emergencies like stroke, fracture, lacerations.
 
+<p align="center">
+  <img src="images/.png" width="623" height="628">
+</p>
+
 3️⃣ Patient-Nurse-Doctor portal 
+
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>
 
 4️⃣ Firebase connectivity for Database
 
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>
+
 5️⃣ User-friendly synchronized application 
+
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>
+
 
 ## Contribute 👨‍👨‍👧‍👦
 Thanks for taking the time to contribute!
