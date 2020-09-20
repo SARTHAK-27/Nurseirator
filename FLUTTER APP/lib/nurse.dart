@@ -330,7 +330,6 @@ class _nurseState extends State<nurse> {
             colour: Colors.grey,
             onpress: (){
               write();
-              Navigator.pushNamed(context, '/avail');
             },)
           ],
         ),

@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -84,7 +85,7 @@ Widget CardUI(String lis,String test,String to,String from,String hos,String nam
           children: [Text("Hospital:",
             style: TextStyle(color: Colors.black,fontSize: 25,fontWeight: FontWeight.bold),
           ),
-            Text(hos+" Hospital",
+            Text(hos,
                 style: TextStyle(color: Colors.black,fontSize: 25,fontWeight: FontWeight.bold),
               ),
           ],
@@ -113,9 +114,6 @@ Widget CardUI(String lis,String test,String to,String from,String hos,String nam
         SizedBox(height: 10,),
         buttonn(colour: Colors.grey
           ,
-        onpress: (){
-          //Navigator.pushNamed(context, '/booked');
-        },
         chilld: Text('Book Now'),)
       ],
     ),

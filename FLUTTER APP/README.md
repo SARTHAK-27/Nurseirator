@@ -23,22 +23,22 @@ The application aims to provide online consultance and healthcare, booking appoi
 ## Nurseirator Flutter Application
 
 <p align="center">
-  <img src="images/.png" width="623" height="628">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="images/.png" width="623" height="628">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="images/.png" width="623" height="628">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="iamges/.png" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="593" height="598">
 </p>
 <p align="center">
-  <img src="iamges/.png" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="593" height="598">
 </p>
 <p align="center">
-  <img src="iamges/.png" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="593" height="598">
 </p>
 
 ## Resources 📜💻👀
