@@ -409,14 +409,21 @@ function display_Nurse(){
       uid=  user.uid;
 
       var name = document.getElementById('nurse_name');
-
+      var hospital = document.getElementById('hospital');
+      var licno =document.getElementById('lino');
       firebase.database().ref('nurse/'+uid).once("value",snap=>{
 
         name.innerHTML = snap.val().First_Name +" "+ snap.val().Last_Name;
       }).then(function(response){
 
 
+        firebase.database().ref('nurse/'+ uid +'/extra').once("value",snap=>{
 
+          licno.innerHTML = snap.val().License_no;
+          hospital.innerHTML=snap.val().Hospital;
+
+
+        })
 
 
       })
@@ -447,13 +454,20 @@ function display_Doctor(){
       uid=  user.uid;
 
       var name = document.getElementById('doctor_name');
-
+      var hospital = document.getElementById('hospital');
+      var licno =document.getElementById('lino');
       firebase.database().ref('doctor/'+uid).once("value",snap=>{
 
         name.innerHTML = snap.val().First_Name +" "+ snap.val().Last_Name;
       }).then(function(response){
 
+        firebase.database().ref('doctor/'+ uid +'/extra').once("value",snap=>{
 
+          licno.innerHTML = snap.val().License_no;
+          hospital.innerHTML=snap.val().Hospital;
+
+
+        })
         
 
 
