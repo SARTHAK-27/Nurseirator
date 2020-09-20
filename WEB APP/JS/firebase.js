@@ -145,8 +145,10 @@ function logout(){
 
   firebase.auth().onAuthStateChanged(user => {
     if(user){
-      firebase.auth().signOut();
+      
       window.location = 'main.html'; 
+      firebase.auth().signOut();
+      
     }
   
   });
@@ -393,9 +395,11 @@ function display_patient(){
       
 
     }else{
-
-      alert("No active user");
       window.location='main.html';
+      alert("Signed out");
+      
+
+
     }
 
 
@@ -438,9 +442,9 @@ function display_Nurse(){
 
     }
     else{
-
-      alert("No active user");
       window.location='main.html';
+      alert("Signed out");
+      
 
 
     }
@@ -483,9 +487,9 @@ function display_Doctor(){
 
     }
     else{
-
-      alert("No active user");
       window.location='main.html';
+      alert("Signed out");
+      
 
 
     }
