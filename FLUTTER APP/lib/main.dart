@@ -5,6 +5,7 @@ import 'package:nurseirator/login.dart';
 import 'package:nurseirator/nurse.dart';
 import 'package:nurseirator/welcomeScreen.dart';
 import 'package:nurseirator/patient.dart';
+import 'package:nurseirator/medicine.dart';
 import 'package:nurseirator/Reg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -24,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/nurse',
+      initialRoute: '/',
       routes: {
         '/':(context)=>welcomeScreen(),
         '/register':(context)=>registerScreen(),
@@ -32,6 +33,7 @@ class _MyAppState extends State<MyApp> {
         '/login':(context)=>loginScreen(),
         '/patient':(context)=>patient(),
         '/nurse':(context)=>nurse(),
+        '/medical':(context)=>medical(),
       },
     );
   }

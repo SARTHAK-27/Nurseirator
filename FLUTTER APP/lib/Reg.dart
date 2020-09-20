@@ -386,6 +386,7 @@ class _registrationState extends State<registration> {
                   try {
                     final newuser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
+
                     if (newuser != null) {
                       write();
                       print('done');
@@ -408,8 +409,10 @@ class _registrationState extends State<registration> {
   }
 
   void write() {
+    User user = _auth.currentUser;
+    var uid = user.uid;
     if (role == 'Doctor') {
-      DBRef.child("doctor").push().set({
+      DBRef.child("doctor").child(uid).set({
         'Name': name,
         'Address': address,
         'City': city,
@@ -420,9 +423,10 @@ class _registrationState extends State<registration> {
         'Role': role,
         'State': state,
         'ZipCode': zipcode,
+        'uid':uid,
       });
     } else if (role == 'Nurse') {
-      DBRef.child("nurse").push().set({
+      DBRef.child("nurse").child(uid).set({
         'Name': name,
         'Address': address,
         'City': city,
@@ -433,9 +437,10 @@ class _registrationState extends State<registration> {
         'Role': role,
         'State': state,
         'ZipCode': zipcode,
+        'uid':uid,
       });
     } else {
-      DBRef.child("patient").push().set({
+      DBRef.child("patient").child(uid).set({
         'Name': name,
         'Address': address,
         'City': city,
@@ -446,6 +451,7 @@ class _registrationState extends State<registration> {
         'Role': role,
         'State': state,
         'ZipCode': zipcode,
+        'uid':uid,
       });
     }
   }

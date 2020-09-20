@@ -1,15 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:nurseirator/Boxes.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:nurseirator/button.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 class patient extends StatefulWidget {
   @override
   _patientState createState() => _patientState();
 }
-
+final DBRef = FirebaseDatabase.instance.reference();
+FirebaseDatabase fb;
 class _patientState extends State<patient> {
+  final _auth = FirebaseAuth.instance;
+  String message;
+  String mail;
   @override
+  void initState() {
+    super.initState();
+
+    getCurrentUser();
+  }
+  void getCurrentUser() async {
+    try {
+      final user = await _auth.currentUser;
+      if (user != null) {
+        mail = user.email;
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
   String initial='one week ago';
   List test=['one week ago','one month ago','more than a month ago'];
+  String mon,tue,wed,thu,fri,sat,sun;
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
@@ -35,6 +58,7 @@ class _patientState extends State<patient> {
                   Flexible(
                     child: TextField(
                       onChanged: (value) {
+                        mon=value;
                       },
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
@@ -62,6 +86,7 @@ class _patientState extends State<patient> {
                   Flexible(
                     child: TextField(
                       onChanged: (value) {
+                        tue=value;
                       },
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
@@ -89,6 +114,7 @@ class _patientState extends State<patient> {
                   Flexible(
                     child: TextField(
                       onChanged: (value) {
+                        wed=value;
                       },
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
@@ -116,6 +142,7 @@ class _patientState extends State<patient> {
                   Flexible(
                     child: TextField(
                       onChanged: (value) {
+                        thu=value;
                       },
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
@@ -143,6 +170,7 @@ class _patientState extends State<patient> {
                   Flexible(
                     child: TextField(
                       onChanged: (value) {
+                        fri=value;
                       },
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
@@ -170,6 +198,7 @@ class _patientState extends State<patient> {
                   Flexible(
                     child: TextField(
                       onChanged: (value) {
+                        sat=value;
                       },
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
@@ -197,6 +226,7 @@ class _patientState extends State<patient> {
                   Flexible(
                     child: TextField(
                       onChanged: (value) {
+                        sun=value;
                       },
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
@@ -243,11 +273,36 @@ class _patientState extends State<patient> {
                 ),
               ],
             ),
+            Container(
+              child: buttonn(
+                colour: Colors.blueAccent,
+                chilld: Text('Update Detail'),
+                onpress: (){
+                  write();
+                  print('done');
+                  Navigator.pushNamed(context, '/medical');
+                },
+              ),
+            ),
 
           ],
 
         ),
       ),
     );
+  }
+  void write()
+  {
+   User user = _auth.currentUser;
+   var uid = user.uid;
+    DBRef.child("Medi").child(uid).set({
+      'Monday':mon,
+      'Tuesday':tue,
+      'Wednesday':wed,
+      'Thursday':thu,
+      'Friday':fri,
+      'Saturday':sat,
+      'Sunday':sun,
+    });
   }
 }
