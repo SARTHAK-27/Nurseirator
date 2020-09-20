@@ -38,7 +38,7 @@ The application aims to provide online consultance and healthcare, booking appoi
   <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c5.PNG" width="593" height="598">
 </p>
 <p align="center">
-  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c6(1).PNG" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/C6%20(1).PNG" width="593" height="598">
 </p>
 
 ## Resources 📜💻👀
