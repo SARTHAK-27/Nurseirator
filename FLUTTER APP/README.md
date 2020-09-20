@@ -26,19 +26,19 @@ The application aims to provide online consultance and healthcare, booking appoi
   <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="623" height="628">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c2.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="623" height="628">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c3.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c4.PNG" width="593" height="598">
 </p>
 <p align="center">
-  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c5.PNG" width="593" height="598">
 </p>
 <p align="center">
-  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c6.PNG" width="593" height="598">
 </p>
 
 ## Resources 📜💻👀
