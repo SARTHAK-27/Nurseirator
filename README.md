@@ -28,12 +28,6 @@ The application aims to provide online consultance and healthcare, booking appoi
   <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c5.PNG" width="593" height="598">
 </p>
 
-### Nurseirator Website 
-<p align="center">
-  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/signup%20form.jpeg.PNG" width="593" height="598">
-</p>
-
-
 2️⃣ Congenial Chatbot to assist users with their queries and provide remedies for fever, headache, rash, Diarrhoea-like symptoms, Covid-19 symptoms, emergencies like stroke, fracture, lacerations.
 
 3️⃣ Patient-Nurse-Doctor portal 
