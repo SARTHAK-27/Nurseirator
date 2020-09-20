@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'button.dart';
 class nurse extends StatefulWidget {
   @override
   _nurseState createState() => _nurseState();
 }
-
+final DBRef = FirebaseDatabase.instance.reference();
+FirebaseDatabase fb;
 String initial = 'one week ago';
 List test = ['one week ago', 'one month ago', 'more than a month ago'];
 String defaul1='00';
@@ -16,6 +19,8 @@ List deefe1=['00','01','02','03','04','05','06','07','08','09','10','11','12','1
 String def2='00';
 List deefe2=['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59'];
 class _nurseState extends State<nurse> {
+  final _auth = FirebaseAuth.instance;
+  String lis,hos;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +51,9 @@ class _nurseState extends State<nurse> {
                   ),
                   Flexible(
                     child: TextField(
-                      onChanged: (value) {},
+                      onChanged: (value) {
+                        lis=value;
+                      },
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
@@ -72,17 +79,17 @@ class _nurseState extends State<nurse> {
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   SizedBox(
-                    width: 25,
+                    width: 55,
                   ),
                   Flexible(
                     child: TextField(
-                      onChanged: (value) {},
+                      onChanged: (value) {hos=value;},
                       style: TextStyle(color: Colors.black, fontSize: 15),
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         hintStyle: TextStyle(color: Colors.black),
                         hintText: 'Enter Your Hospital Name',
-                        border: OutlineInputBorder(
+                        border:OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20.0)),
                         ),
                       ),
@@ -240,7 +247,7 @@ class _nurseState extends State<nurse> {
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         hintStyle: TextStyle(color: Colors.black),
-                        hintText: 'Enter Your Medicine for Monday',
+                        hintText: 'Upload the Address Proof',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20.0)),
                         ),
@@ -289,9 +296,27 @@ class _nurseState extends State<nurse> {
                 ),
               ],
             ),
+            SizedBox(height: 20,),
+            buttonn(chilld: Text('Submit'),
+            colour: Colors.grey,
+            onpress: (){
+              write();
+            },)
           ],
         ),
       ),
     );
+  }
+  void write()
+  {
+    User user = _auth.currentUser;
+    var uid = user.uid;
+    DBRef.child("available").child(uid).set({
+      'License':lis,
+      'hospital':hos,
+      'from':defaul1+defaul2,
+      'to':defa1+def2,
+      'corona test':initial,
+    });
   }
 }
