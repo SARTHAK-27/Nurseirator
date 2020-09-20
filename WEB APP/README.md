@@ -15,3 +15,24 @@ The website aims to provide online consultance and healthcare, booking appointme
 3️⃣ Patient-Nurse-Doctor portal 
 
 4️⃣ Firebase connectivity for Database
+
+## Nurseirator Web Application
+
+<p align="center">
+  <img src="images/.png" width="623" height="628">
+</p>
+<p align="center">
+  <img src="images/.png" width="623" height="628">
+</p>
+<p align="center">
+  <img src="images/.png" width="623" height="628">
+</p>
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>
+<p align="center">
+  <img src="iamges/.png" width="593" height="598">
+</p>

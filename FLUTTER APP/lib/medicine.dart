@@ -4,19 +4,21 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:nurseirator/button.dart';
 class medical extends StatefulWidget {
   @override
+  medical({this.uu,this.mon,this.tue,this.wed,this.thu,this.fri,this.sat,this.sun});
+  final mon,tue,wed,thu,fri,sat,sun,uu;
   _medicalState createState() => _medicalState();
 }
 final _auth = FirebaseAuth.instance;
 final User user = _auth.currentUser;
 final uid = user.uid;
 final ref=FirebaseDatabase.instance.reference();
-var mon,tue,wed,thu,fri,sat,sun;
+
 class _medicalState extends State<medical> {
   @override
-  void initState()
+  /*void initState()
   {
     User user = _auth.currentUser;
-    var uid = user.uid;
+    var uid = widget.uu;
     print(uid);
     ref.child('Medi').child(uid).child('Monday').once().then((DataSnapshot dataSnapshot) {
       mon=dataSnapshot.value;
@@ -47,11 +49,47 @@ class _medicalState extends State<medical> {
 
     });
     super.initState();
-  }
+  }*/
   @override
 
   Widget build(BuildContext context) {
-    dataa();
+    //@override
+    /*void initState()
+    {
+      User user = _auth.currentUser;
+      var uid = widget.uu;
+      print(uid);
+      ref.child('Medi').child(uid).child('Monday').once().then((DataSnapshot dataSnapshot) {
+        mon=dataSnapshot.value;
+
+      });
+      ref.child('Medi').child(uid).child('Tuesday').once().then((DataSnapshot dataSnapshot) {
+        tue=dataSnapshot.value;
+
+      });
+      ref.child('Medi').child(uid).child('Wednesday').once().then((DataSnapshot dataSnapshot) {
+        wed=dataSnapshot.value;
+
+      });
+      ref.child('Medi').child(uid).child('Thursday').once().then((DataSnapshot dataSnapshot) {
+        thu=dataSnapshot.value;
+
+      });
+      ref.child('Medi').child(uid).child('Friday').once().then((DataSnapshot dataSnapshot) {
+        fri=dataSnapshot.value;
+
+      });
+      ref.child('Medi').child(uid).child('Saturday').once().then((DataSnapshot dataSnapshot) {
+        sat=dataSnapshot.value;
+
+      });
+      ref.child('Medi').child(uid).child('Sunday').once().then((DataSnapshot dataSnapshot) {
+        sun=dataSnapshot.value;
+
+      });
+      super.initState();
+    }*/
+    //dataa();
     return Scaffold(
       backgroundColor: Colors.blueAccent,
       body: ListView(
@@ -69,7 +107,7 @@ class _medicalState extends State<medical> {
                     Text('Monday',
                     style: TextStyle(fontSize: 50,
                     fontWeight: FontWeight.bold),),
-                    Text(mon,style: TextStyle(fontSize: 50,
+                    Text(widget.mon,style: TextStyle(fontSize: 50,
                         fontWeight: FontWeight.bold),),
                   ],
                 ),
@@ -88,7 +126,7 @@ class _medicalState extends State<medical> {
                   Text('Tuesday',
                     style: TextStyle(fontSize: 50,
                         fontWeight: FontWeight.bold),),
-                  Text(tue,style: TextStyle(fontSize: 50,
+                  Text(widget.tue,style: TextStyle(fontSize: 50,
                       fontWeight: FontWeight.bold),),
                 ],
               ),
@@ -107,7 +145,7 @@ class _medicalState extends State<medical> {
                   Text('Wednesday',
                     style: TextStyle(fontSize: 50,
                         fontWeight: FontWeight.bold),),
-                  Text(wed,style: TextStyle(fontSize: 50,
+                  Text(widget.wed,style: TextStyle(fontSize: 50,
                       fontWeight: FontWeight.bold),),
                 ],
               ),
@@ -126,7 +164,7 @@ class _medicalState extends State<medical> {
                   Text('Thursday',
                     style: TextStyle(fontSize: 50,
                         fontWeight: FontWeight.bold),),
-                  Text(thu,style: TextStyle(fontSize: 50,
+                  Text(widget.thu,style: TextStyle(fontSize: 50,
                       fontWeight: FontWeight.bold),),
                 ],
               ),
@@ -145,7 +183,7 @@ class _medicalState extends State<medical> {
                   Text('Friday',
                     style: TextStyle(fontSize: 50,
                         fontWeight: FontWeight.bold),),
-                  Text(fri,style: TextStyle(fontSize: 50,
+                  Text(widget.fri,style: TextStyle(fontSize: 50,
                       fontWeight: FontWeight.bold),),
                 ],
               ),
@@ -163,7 +201,7 @@ class _medicalState extends State<medical> {
                   Text('Saturday',
                     style: TextStyle(fontSize: 50,
                         fontWeight: FontWeight.bold),),
-                  Text(sat,style: TextStyle(fontSize: 50,
+                  Text(widget.sat,style: TextStyle(fontSize: 50,
                       fontWeight: FontWeight.bold),),
                 ],
               ),
@@ -182,7 +220,7 @@ class _medicalState extends State<medical> {
                   Text('Sunday',
                     style: TextStyle(fontSize: 50,
                         fontWeight: FontWeight.bold),),
-                  Text(sun,style: TextStyle(fontSize: 50,
+                  Text(widget.sun,style: TextStyle(fontSize: 50,
                       fontWeight: FontWeight.bold),),
                 ],
               ),
@@ -206,7 +244,7 @@ class _medicalState extends State<medical> {
       ),
     );
   }
-  void dataa()
+  /*void dataa()
   {
     User user = _auth.currentUser;
     var uid = user.uid;
@@ -239,6 +277,6 @@ class _medicalState extends State<medical> {
       sun=dataSnapshot.value;
 
     });
-  }
+  }*/
 
 }

@@ -389,18 +389,18 @@ class _registrationState extends State<registration> {
 
                     if (newuser != null) {
                       write();
-                      print('done');
                       if(role=='Patient')
                         {
                           Navigator.pushNamed(context, '/patient');
                         }
-                      if(role=='nurse')
+                      else if(role=='Nurse')
                         {
                           Navigator.pushNamed(context, '/nurse');
                         }
                       if(role=='Doctor'){
                         Navigator.pushNamed(context, '/nurse');
                       }
+                      print('done');
                     }
                     setState(() {
                       showSpinner = false;
