@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nurseirator/Reg.dart';
 import 'package:nurseirator/Registration.dart';
+import 'package:nurseirator/available.dart';
 import 'package:nurseirator/login.dart';
 import 'package:nurseirator/nurse.dart';
 import 'package:nurseirator/welcomeScreen.dart';
@@ -11,6 +12,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:nurseirator/login.dart';
 import 'nurse.dart';
+import 'package:nurseirator/chatbot.dart';
+import 'package:nurseirator/available.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -34,6 +37,8 @@ class _MyAppState extends State<MyApp> {
         '/patient':(context)=>patient(),
         '/nurse':(context)=>nurse(),
         '/medical':(context)=>medical(),
+        '/bot':(context)=>chatbot(),
+        '/avail':(context)=>avail(),
       },
     );
   }

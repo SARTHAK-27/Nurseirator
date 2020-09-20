@@ -39,7 +39,7 @@ class _patientState extends State<patient> {
       body: Container(
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
-        color: Colors.lightBlueAccent,
+        color: Colors.blueAccent,
         child: ListView(
           children: [
             Center(
@@ -273,9 +273,10 @@ class _patientState extends State<patient> {
                 ),
               ],
             ),
+            SizedBox(height: 15,),
             Container(
               child: buttonn(
-                colour: Colors.blueAccent,
+                colour: Colors.grey,
                 chilld: Text('Update Detail'),
                 onpress: (){
                   write();
