@@ -403,13 +403,89 @@ function display_patient(){
 function display_Nurse(){
 
 
+  firebase.auth().onAuthStateChanged(user => {
 
+    if(user){
+      uid=  user.uid;
+
+      var name = document.getElementById('nurse_name');
+      var hospital = document.getElementById('hospital');
+      var licno =document.getElementById('lino');
+      firebase.database().ref('nurse/'+uid).once("value",snap=>{
+
+        name.innerHTML = snap.val().First_Name +" "+ snap.val().Last_Name;
+      }).then(function(response){
+
+
+        firebase.database().ref('nurse/'+ uid +'/extra').once("value",snap=>{
+
+          licno.innerHTML = snap.val().License_no;
+          hospital.innerHTML=snap.val().Hospital;
+
+
+        })
+
+
+      })
+
+
+    }
+    else{
+
+      alert("No active user");
+      window.location='main.html';
+
+
+    }
+  
+  
+  });
 
 
 }
 
 //Display Information about patient in doctor html
 function display_Doctor(){
+
+
+  firebase.auth().onAuthStateChanged(user => {
+
+    if(user){
+      uid=  user.uid;
+
+      var name = document.getElementById('doctor_name');
+      var hospital = document.getElementById('hospital');
+      var licno =document.getElementById('lino');
+      firebase.database().ref('doctor/'+uid).once("value",snap=>{
+
+        name.innerHTML = snap.val().First_Name +" "+ snap.val().Last_Name;
+      }).then(function(response){
+
+        firebase.database().ref('doctor/'+ uid +'/extra').once("value",snap=>{
+
+          licno.innerHTML = snap.val().License_no;
+          hospital.innerHTML=snap.val().Hospital;
+
+
+        })
+        
+
+
+      })
+
+
+    }
+    else{
+
+      alert("No active user");
+      window.location='main.html';
+
+
+    }
+  
+  
+  });
+
 
 
 }

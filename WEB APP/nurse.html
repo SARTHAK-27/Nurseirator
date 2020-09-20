@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="./CSS/nurse.css">
 </head>
-    <body>
+    <body onload=display_Nurse()>
       <div class="container" id="ct">
         <h1 class="display1 ">NurseiRaTor</h1>
         <button type="submit" name="button" class="bt"  onclick=logout()>Log Out</button>
@@ -15,6 +15,7 @@
 
 <div class="wrapper" id="main">
         <h1 class="display4">WELCOME  <span id="nurse_name" style="text-transform: capitalize;"></span>,APPOINTED FOR TODAY ARE :</h1>
+        <h3>License no: <span id="lino"></span> Hospital <span id="hospital"></span> </h3>
         <div class="cols">
                   <div class="col" ontouchstart="this.classList.toggle('hover');">
                       <div class="container">
@@ -123,6 +124,10 @@
                   </div>
               </div>
            </div>
+
+
+
+           
     <div class="fixed-footer">
        <div class="container">
           Copyright & copy ; 2020 NurseiRaTor
@@ -133,39 +138,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
     <script src="JS/firebase.js" ></script>
 
-    <script>
-        firebase.auth().onAuthStateChanged(user => {
-            if(user) {
-            console.log("active");
-            uid = user.uid;
-            
-            var Name = document.getElementById('nurse_name');
-        
-            firebase.database().ref('Nurse/'+user.uid).once("value",snap =>{
-                
-                if(snap.val().role=="Nurse") {   
-                name =  snap.val().Name,
-                Name.innerHTML = name
-            }
-    
-            else{
-                alert("error");
-                firebase.auth().signOut();
-                window.location='main.html';
-            }
-               
-            });
-            
-            }
-            else{
-                alert("no active user!");
-                window.location = "login.html"
-        
-            }
-        
-          });
-        
-    </script>
+
 
 </body>
 </html>
