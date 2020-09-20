@@ -12,6 +12,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:nurseirator/login.dart';
 import 'nurse.dart';
+import 'package:nurseirator/booked.dart';
 import 'package:nurseirator/chatbot.dart';
 import 'package:nurseirator/available.dart';
 void main() async{
@@ -39,6 +40,7 @@ class _MyAppState extends State<MyApp> {
         '/medical':(context)=>medical(),
         '/bot':(context)=>chatbot(),
         '/avail':(context)=>avail(),
+        '/book':(context)=>booked(),
       },
     );
   }
