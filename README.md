@@ -13,47 +13,35 @@ The application aims to provide online consultance and healthcare, booking appoi
 ## Nurseirator Flutter Application
 
 <p align="center">
-  <img src="images/.png" width="623" height="628">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c1.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="images/.png" width="623" height="628">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c2.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="images/.png" width="623" height="628">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c3.PNG" width="623" height="628">
 </p>
 <p align="center">
-  <img src="iamges/.png" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c4.PNG" width="593" height="598">
 </p>
 <p align="center">
-  <img src="iamges/.png" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/c5.PNG" width="593" height="598">
 </p>
+
+### Nurseirator Website 
 <p align="center">
-  <img src="iamges/.png" width="593" height="598">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/signup%20form.jpeg.PNG" width="593" height="598">
 </p>
+
 
 2️⃣ Congenial Chatbot to assist users with their queries and provide remedies for fever, headache, rash, Diarrhoea-like symptoms, Covid-19 symptoms, emergencies like stroke, fracture, lacerations.
 
-<p align="center">
-  <img src="images/.png" width="623" height="628">
-</p>
-
 3️⃣ Patient-Nurse-Doctor portal 
 
-<p align="center">
-  <img src="iamges/.png" width="593" height="598">
-</p>
 
 4️⃣ Firebase connectivity for Database
 
-<p align="center">
-  <img src="iamges/.png" width="593" height="598">
-</p>
-
 5️⃣ User-friendly synchronized application 
-
-<p align="center">
-  <img src="iamges/.png" width="593" height="598">
-</p>
 
 
 ## Contribute 👨‍👨‍👧‍👦
@@ -85,4 +73,9 @@ This project is licensed under the MIT License - see the [License.md](https://gi
 
 <p align="center">
 	Made with :heart: by <a href="https://.in">HASICS</a>
+</p>
+### Team
+
+<p align="center">
+  <img src="https://github.com/SARTHAK-27/Nurseirator/blob/master/images/team.jpeg" width="593" height="598">
 </p>
